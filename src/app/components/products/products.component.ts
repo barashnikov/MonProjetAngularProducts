@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from 'src/app/domain/iproduct';
 import { ProductsService } from 'src/app/services/products.service';
@@ -13,7 +14,11 @@ export class ProductsComponent implements OnInit {
   constructor(private service : ProductsService) { }
 
   ngOnInit(): void{
-  this.products = this.service.getAllProducts();
+  this.service.getAllProducts().subscribe(
+    resp => this.products = resp,
+    erreur => console.log('LOG : Attention il y a  eu l erreur' + erreur));
+
+
 }
 
 }

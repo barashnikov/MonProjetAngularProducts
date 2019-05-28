@@ -9,6 +9,7 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 registerLocaleData(localeFr, 'fr');
 const routingTable : Route[] = [
   {path : '', redirectTo : 'welcome', pathMatch: 'full'},
@@ -30,7 +31,8 @@ const routingTable : Route[] = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routingTable)
+    RouterModule.forRoot(routingTable),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
