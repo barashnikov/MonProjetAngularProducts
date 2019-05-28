@@ -13,7 +13,7 @@ export class ProductsService {
       { id : 'P100',name : 'Café', unitPrice : 2.5},
       { id : 'P200',name : 'Thé', unitPrice : 2.5},
       { id : 'P300',name : 'Jus d orange', unitPrice : 2.5},
-      { id : 'P400',name : 'CocaCola', unitPrice : 2.5}
+      { id : 'P400',name : 'CocaCola', unitPrice : 15}
 
     ];
   }
